@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#0C1320" />
+    <title>Thanks — We Got Your Request | Platinum Service Group</title>
+    <link rel="icon" href="/assets/logo.png" />
+    <link
+      rel="preload"
+      href="/assets/fonts/anton.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/inter.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/thanks/thanks.css" />
+    <style>
+      :root {
+        --thanks-navy: #0c1320;
+        --thanks-ink: #0f1419;
+        --thanks-blue: #0a8bff;
+        --thanks-blue-dark: #086ecc;
+        --thanks-blue-subtle: #e1ecfa;
+        --thanks-red: #df2222;
+        --thanks-red-hover: #b91919;
+        --thanks-muted: #526073;
+        --thanks-fog: #f4f6f9;
+        --thanks-line: #dce2ea;
+      }
+      body.thanks-page {
+        background-color: #ffffff;
+        color: var(--thanks-ink);
+      }
+      .thanks-main {
+        min-height: calc(100vh - 98px - 280px);
+        padding: clamp(48px, 6vw, 76px) 0 clamp(64px, 8vw, 96px);
+        background: #ffffff;
+      }
+      .thanks-container {
+        width: 100%;
+        max-width: 1060px;
+        margin-inline: auto;
+      }
+      .thanks-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #38608a;
+        background-color: var(--thanks-fog);
+        border: 1px solid var(--thanks-line);
+        padding: 6px 14px;
+        border-radius: 4px;
+        margin-bottom: 22px;
+      }
+      .thanks-eyebrow .dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--thanks-red);
+        margin-right: 10px;
+        flex: none;
+      }
+      .thanks-headline {
+        font-family: "Anton", Arial, sans-serif;
+        font-weight: 400;
+        font-size: clamp(48px, 6vw, 76px);
+        line-height: 1.08;
+        letter-spacing: -0.015em;
+        color: var(--thanks-navy);
+        margin: 0 0 20px;
+      }
+      .thanks-headline-accent {
+        color: var(--thanks-blue);
+      }
+      .thanks-lead {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: clamp(17px, 1.6vw, 20px);
+        line-height: 1.6;
+        color: var(--thanks-muted);
+        max-width: 640px;
+        margin: 0 0 clamp(42px, 5vw, 56px);
+      }
+      .thanks-steps-wrapper {
+        position: relative;
+        margin-bottom: clamp(42px, 5vw, 56px);
+      }
+      .thanks-steps-line {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: var(--thanks-line);
+        z-index: 1;
+      }
+      .thanks-steps-grid {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: clamp(20px, 3vw, 36px);
+      }
+      .thanks-step-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .thanks-step-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 30px;
+        background-color: var(--thanks-navy);
+        color: #ffffff;
+        font-family: "Anton", Arial, sans-serif;
+        font-size: 17px;
+        line-height: 1;
+        border-radius: 4px;
+        margin-bottom: 18px;
+        box-shadow: 0 0 0 5px #ffffff;
+      }
+      .thanks-step-title {
+        font-family: "Anton", Arial, sans-serif;
+        font-size: clamp(23px, 2vw, 27px);
+        font-weight: 400;
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+        color: var(--thanks-navy);
+        margin: 0 0 12px;
+      }
+      .thanks-step-desc {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.65;
+        color: var(--thanks-muted);
+        margin: 0;
+      }
+      .thanks-divider {
+        border: 0;
+        height: 1px;
+        background-color: var(--thanks-line);
+        margin: 0;
+      }
+      .thanks-cta-area {
+        margin-top: clamp(40px, 5vw, 60px);
+      }
+      .thanks-cta-container {
+        background: var(--thanks-fog);
+        border: 1px solid var(--thanks-line);
+        border-radius: 12px;
+        padding: clamp(32px, 4vw, 44px) clamp(28px, 4vw, 44px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 36px;
+        box-shadow: 0 2px 14px rgba(12, 19, 32, 0.04);
+      }
+      .thanks-assurance {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        max-width: 520px;
+      }
+      .thanks-check-circle {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background-color: var(--thanks-blue-subtle);
+        color: var(--thanks-blue);
+        display: grid;
+        place-items: center;
+        flex: none;
+        margin-top: 2px;
+      }
+      .thanks-check-circle svg {
+        width: 20px;
+        height: 20px;
+      }
+      .thanks-assurance-content {
+        display: flex;
+        flex-direction: column;
+      }
+      .thanks-assurance-title {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        color: var(--thanks-navy);
+        line-height: 1.35;
+        margin-bottom: 6px;
+      }
+      .thanks-assurance-text {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--thanks-muted);
+        margin: 0;
+      }
+      .thanks-call-wrapper {
+        flex: none;
+      }
+      .thanks-call-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 20px;
+        background-color: var(--thanks-red);
+        color: #ffffff;
+        border-radius: 8px;
+        padding: 18px 30px;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid var(--thanks-red);
+        min-height: 76px;
+        box-shadow: 0 8px 24px rgba(223, 34, 34, 0.28);
+        transition:
+          background-color 0.16s ease,
+          transform 0.16s ease,
+          box-shadow 0.16s ease;
+      }
+      .thanks-call-btn:hover {
+        background-color: var(--thanks-red-hover);
+        border-color: var(--thanks-red-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(223, 34, 34, 0.38);
+      }
+      .thanks-call-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: grid;
+        place-items: center;
+        flex: none;
+        color: #ffffff;
+      }
+      .thanks-call-icon svg {
+        width: 24px;
+        height: 24px;
+      }
+      .thanks-call-text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .thanks-call-kicker {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffd2d8;
+        line-height: 1.3;
+        margin-bottom: 3px;
+        display: block;
+      }
+      .thanks-call-number {
+        font-family: "Anton", Arial, sans-serif;
+        font-size: clamp(28px, 2.5vw, 36px);
+        font-weight: 400;
+        line-height: 1.1;
+        color: #ffffff;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        display: block;
+      }
+      @media (max-width: 960px) {
+        .thanks-steps-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 32px 24px;
+        }
+        .thanks-steps-line {
+          display: none;
+        }
+        .thanks-step-num {
+          box-shadow: none;
+        }
+        .thanks-cta-container {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 28px;
+          padding: 28px 24px;
+        }
+        .thanks-assurance {
+          max-width: none;
+        }
+        .thanks-call-wrapper {
+          width: 100%;
+        }
+        .thanks-call-btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+      @media (max-width: 600px) {
+        .thanks-main {
+          padding: 36px 0 54px;
+        }
+        .thanks-eyebrow {
+          font-size: 11px;
+          letter-spacing: 0.08em;
+          padding: 5px 12px;
+          margin-bottom: 16px;
+        }
+        .thanks-headline {
+          font-size: 42px;
+          margin-bottom: 16px;
+        }
+        .thanks-lead {
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 34px;
+        }
+        .thanks-steps-grid {
+          grid-template-columns: 1fr;
+          gap: 26px;
+        }
+        .thanks-step-title {
+          font-size: 23px;
+        }
+        .thanks-step-desc {
+          font-size: 15px;
+        }
+        .thanks-cta-container {
+          padding: 24px 18px;
+          gap: 22px;
+        }
+        .thanks-assurance-title {
+          font-size: 17px;
+        }
+        .thanks-assurance-text {
+          font-size: 14px;
+        }
+        .thanks-call-btn {
+          padding: 16px 20px;
+          gap: 14px;
+          min-height: 68px;
+        }
+        .thanks-call-icon {
+          width: 44px;
+          height: 44px;
+        }
+        .thanks-call-number {
+          font-size: 26px;
+        }
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2SJR2HMK0T"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-2SJR2HMK0T");
+    </script>
+    <!-- Google Ads phone conversion tracking -->
+    <script>
+      gtag("config", "AW-17642452622/cMzeCOD6ip0dEI7tydxB", {
+        phone_conversion_number: "817-929-4119",
+      });
+    </script>
+    <!-- Event snippet for Submit lead form v2 conversion page -->
+    <script>
+      gtag("event", "conversion", {
+        send_to: "AW-17642452622/ohmtCOnWmZ0dEI7tydxB",
+      });
+    </script>
+    <script src="/thanks/receipt.js" defer></script>
+  </head>
+  <body class="thanks-page">
+    <a href="#main" class="skip">Skip To Content</a>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="/" aria-label="Platinum home">
+          <img
+            src="/assets/logo.png"
+            alt="Platinum Service Group · Restoration & Construction"
+            width="258"
+            height="64"
+          />
+        </a>
+        <a
+          class="button nav-call"
+          href="tel:+18179294119"
+          aria-label="Call Platinum at 817-929-4119"
+        >
+          Call <b>817-929-4119</b>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" class="thanks-main">
+      <div class="wrap thanks-container">
+        <!-- 1. Eyebrow Tag -->
+        <div class="thanks-eyebrow" id="receipt-label">
+          <span class="dot"></span>THANKS — WE GOT YOUR REQUEST
+        </div>
+
+        <!-- 2. Clean Natural Headline -->
+        <h1 class="thanks-headline" id="receipt-title">
+          Here’s What <span class="thanks-headline-accent">Happens Next.</span>
+        </h1>
+
+        <!-- 3. Lead Paragraph -->
+        <p class="thanks-lead" id="receipt-message">
+          Your request is in. A member of our team will review the details and
+          reach out to guide you through the next steps.
+        </p>
+
+        <!-- 4. Four-Step Process Grid -->
+        <section class="thanks-steps-wrapper" aria-label="Next steps process">
+          <div class="thanks-steps-line" aria-hidden="true"></div>
+          <div class="thanks-steps-grid">
+            <article class="thanks-step-card">
+              <span class="thanks-step-num">01</span>
+              <h2 class="thanks-step-title">We Review Your Request.</h2>
+              <p class="thanks-step-desc">
+                We look over the details you submitted so we understand the
+                damage and what kind of help you may need.
+              </p>
+            </article>
+
+            <article class="thanks-step-card">
+              <span class="thanks-step-num">02</span>
+              <h2 class="thanks-step-title">We Give You a Call.</h2>
+              <p class="thanks-step-desc">
+                A member of our team will contact you to discuss the situation,
+                answer questions, and confirm the best next step.
+              </p>
+            </article>
+
+            <article class="thanks-step-card">
+              <span class="thanks-step-num">03</span>
+              <h2 class="thanks-step-title">We Schedule the Visit.</h2>
+              <p class="thanks-step-desc">
+                If needed, we’ll arrange a time for an on-site assessment and
+                explain what to expect before we arrive.
+              </p>
+            </article>
+
+            <article class="thanks-step-card">
+              <span class="thanks-step-num">04</span>
+              <h2 class="thanks-step-title">We Walk You Through the Plan.</h2>
+              <p class="thanks-step-desc">
+                After assessing the situation, we’ll explain the recommended
+                restoration process and any repairs that may follow.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- 5. Horizontal Divider -->
+        <hr class="thanks-divider" aria-hidden="true" />
+
+        <!-- 6. Substantial Call CTA Container & Prominent Button -->
+        <section class="thanks-cta-area" aria-label="Immediate contact options">
+          <div class="thanks-cta-container">
+            <div class="thanks-assurance">
+              <div class="thanks-check-circle" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="thanks-assurance-content">
+                <strong class="thanks-assurance-title"
+                  >You won’t be left guessing.</strong
+                >
+                <p class="thanks-assurance-text">
+                  We’ll keep you informed from the first follow-up to the
+                  restoration plan. For urgent water removal or active leaks,
+                  reach our dispatch team directly.
+                </p>
+              </div>
+            </div>
+
+            <div class="thanks-call-wrapper">
+              <a
+                href="tel:+18179294119"
+                class="thanks-call-btn button"
+                data-cta="phone"
+                data-placement="thanks_bottom_cta"
+                aria-label="Need to reach us sooner? Call Platinum 24/7 at 817-929-4119"
+              >
+                <div class="thanks-call-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+                    />
+                  </svg>
+                </div>
+                <div class="thanks-call-text">
+                  <span class="thanks-call-kicker"
+                    >NEED TO REACH US SOONER?</span
+                  >
+                  <strong class="thanks-call-number">Call 817-929-4119</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <img
+            src="/assets/logo-white.png"
+            width="250"
+            height="62"
+            alt="Platinum Service Group · Restoration & Construction"
+          />
+          <p>
+            Family Owned. North Texas Based.<br />Restoration From Cleanup To
+            Rebuild.
+          </p>
+        </div>
+        <div>
+          <strong>CONTACT PLATINUM</strong>
+          <a href="tel:+18179294119">817-929-4119</a>
+          <a href="mailto:office@platinumsg.com">office@platinumsg.com</a>
+        </div>
+        <div>
+          <strong>OUR HOME BASE</strong>
+          <p>4334 U.S. Hwy 380, Ste. 600<br />Decatur, TX 76234</p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Platinum Service Group</span>
+        <div>
+          <a href="https://www.platinumsg.com/privacy-policy.html"
+            >Privacy Policy</a
+          >
+          <a href="https://www.platinumsg.com/">Company Website ↗</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

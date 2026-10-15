@@ -1,0 +1,379 @@
+/* Refined styles for /thanks route matching Platinum Service Group theme */
+:root {
+  --thanks-navy: #0c1320;
+  --thanks-ink: #0f1419;
+  --thanks-blue: #0a8bff;
+  --thanks-blue-dark: #086ecc;
+  --thanks-blue-subtle: #e1ecfa;
+  --thanks-red: #df2222;
+  --thanks-red-hover: #b91919;
+  --thanks-muted: #526073;
+  --thanks-fog: #f4f6f9;
+  --thanks-line: #dce2ea;
+  --thanks-border: #ccd6e2;
+}
+
+body.thanks-page {
+  background-color: #ffffff;
+  color: var(--thanks-ink);
+}
+
+.thanks-main {
+  min-height: calc(100vh - 98px - 280px);
+  padding: clamp(48px, 6vw, 76px) 0 clamp(64px, 8vw, 96px);
+  background: #ffffff;
+}
+
+.thanks-container {
+  width: 100%;
+  max-width: 1060px;
+  margin-inline: auto;
+}
+
+/* 1. Eyebrow Tag with Signature Red Dot */
+.thanks-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #38608a;
+  background-color: var(--thanks-fog);
+  border: 1px solid var(--thanks-line);
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-bottom: 22px;
+}
+
+.thanks-eyebrow .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--thanks-red);
+  margin-right: 10px;
+  flex: none;
+}
+
+/* 2. Natural Clean Headline (No Selection/Box Highlight) */
+.thanks-headline {
+  font-family: 'Anton', Arial, sans-serif;
+  font-weight: 400;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  color: var(--thanks-navy);
+  margin: 0 0 20px;
+}
+
+.thanks-headline-accent {
+  color: var(--thanks-blue);
+}
+
+/* 3. Subtitle / Lead Paragraph */
+.thanks-lead {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.6;
+  color: var(--thanks-muted);
+  max-width: 640px;
+  margin: 0 0 clamp(42px, 5vw, 56px);
+}
+
+/* 4. Four-Step Process Grid */
+.thanks-steps-wrapper {
+  position: relative;
+  margin-bottom: clamp(42px, 5vw, 56px);
+}
+
+/* Horizontal connector line across step numbers */
+.thanks-steps-line {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--thanks-line);
+  z-index: 1;
+}
+
+.thanks-steps-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(20px, 3vw, 36px);
+}
+
+.thanks-step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Step Number Box */
+.thanks-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 30px;
+  background-color: var(--thanks-navy);
+  color: #ffffff;
+  font-family: 'Anton', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  box-shadow: 0 0 0 5px #ffffff; /* Clean mask over connector line */
+}
+
+/* Natural Step Title without background box */
+.thanks-step-title {
+  font-family: 'Anton', Arial, sans-serif;
+  font-size: clamp(23px, 2vw, 27px);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--thanks-navy);
+  margin: 0 0 12px;
+}
+
+/* Step Description */
+.thanks-step-desc {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--thanks-muted);
+  margin: 0;
+}
+
+/* 5. Horizontal Divider */
+.thanks-divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--thanks-line);
+  margin: 0;
+}
+
+/* 6. Substantial Call CTA Container & Prominent Button */
+.thanks-cta-area {
+  margin-top: clamp(40px, 5vw, 60px);
+}
+
+.thanks-cta-container {
+  background: var(--thanks-fog);
+  border: 1px solid var(--thanks-line);
+  border-radius: 12px;
+  padding: clamp(32px, 4vw, 44px) clamp(28px, 4vw, 44px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 36px;
+  box-shadow: 0 2px 14px rgba(12, 19, 32, 0.04);
+}
+
+/* Left Assurance Section */
+.thanks-assurance {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 520px;
+}
+
+.thanks-check-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--thanks-blue-subtle);
+  color: var(--thanks-blue);
+  display: grid;
+  place-items: center;
+  flex: none;
+  margin-top: 2px;
+}
+
+.thanks-check-circle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.thanks-assurance-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.thanks-assurance-title {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--thanks-navy);
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.thanks-assurance-text {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--thanks-muted);
+  margin: 0;
+}
+
+/* Right Prominent Call CTA Button */
+.thanks-call-wrapper {
+  flex: none;
+}
+
+.thanks-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--thanks-red);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 18px 30px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid var(--thanks-red);
+  min-height: 76px;
+  box-shadow: 0 8px 24px rgba(223, 34, 34, 0.28);
+  transition: background-color 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.thanks-call-btn:hover {
+  background-color: var(--thanks-red-hover);
+  border-color: var(--thanks-red-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(223, 34, 34, 0.38);
+}
+
+.thanks-call-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: grid;
+  place-items: center;
+  flex: none;
+  color: #ffffff;
+}
+
+.thanks-call-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.thanks-call-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.thanks-call-kicker {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffd2d8;
+  line-height: 1.3;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.thanks-call-number {
+  font-family: 'Anton', Arial, sans-serif;
+  font-size: clamp(28px, 2.5vw, 36px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  display: block;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 960px) {
+  .thanks-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+  .thanks-steps-line {
+    display: none;
+  }
+  .thanks-step-num {
+    box-shadow: none;
+  }
+  .thanks-cta-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+    padding: 28px 24px;
+  }
+  .thanks-assurance {
+    max-width: none;
+  }
+  .thanks-call-wrapper {
+    width: 100%;
+  }
+  .thanks-call-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .thanks-main {
+    padding: 36px 0 54px;
+  }
+  .thanks-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 5px 12px;
+    margin-bottom: 16px;
+  }
+  .thanks-headline {
+    font-size: 42px;
+    margin-bottom: 16px;
+  }
+  .thanks-lead {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 34px;
+  }
+  .thanks-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .thanks-step-title {
+    font-size: 23px;
+  }
+  .thanks-step-desc {
+    font-size: 15px;
+  }
+  .thanks-cta-container {
+    padding: 24px 18px;
+    gap: 22px;
+  }
+  .thanks-assurance-title {
+    font-size: 17px;
+  }
+  .thanks-assurance-text {
+    font-size: 14px;
+  }
+  .thanks-call-btn {
+    padding: 16px 20px;
+    gap: 14px;
+    min-height: 68px;
+  }
+  .thanks-call-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .thanks-call-number {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    <!-- Metallic Silver Gradient -->
+    <linearGradient id="silverRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="35%" stop-color="#cbd5e1"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+
+    <!-- Deep Trust Navy Gradient -->
+    <linearGradient id="navyBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16395b"/>
+      <stop offset="100%" stop-color="#0a1d30"/>
+    </linearGradient>
+
+    <!-- Gold Ribbon Gradient -->
+    <linearGradient id="goldRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="30%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fef3c7"/>
+      <stop offset="70%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+
+    <!-- Blue Ribbon Gradient -->
+    <linearGradient id="blueRibbon" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <!-- Outer scalloped star/seal ring -->
+    <circle cx="120" cy="120" r="108" fill="url(#silverRing)"/>
+    
+    <!-- Outer accent dashed ring -->
+    <circle cx="120" cy="120" r="100" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="3 3"/>
+    
+    <!-- Outer solid border -->
+    <circle cx="120" cy="120" r="95" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+
+    <!-- Navy Center Face -->
+    <circle cx="120" cy="120" r="92" fill="url(#navyBg)"/>
+    <circle cx="120" cy="120" r="87" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+
+    <!-- Top Text Arc: ESTABLISHED -->
+    <path id="textArcTop" d="M 52,120 A 68,68 0 0,1 188,120" fill="none"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" fill="#f8fafc" letter-spacing="2.5">
+      <textPath href="#textArcTop" startOffset="50%" text-anchor="middle">
+        ★ ESTABLISHED ★
+      </textPath>
+    </text>
+
+    <!-- 5 Gold Trust Stars -->
+    <g transform="translate(120, 68) scale(0.9)" fill="#fbbf24" stroke="#d97706" stroke-width="0.5">
+      <!-- Center Star -->
+      <polygon points="0,-10 3,-3 10,-3 4,2 6,9 0,5 -6,9 -4,2 -10,-3 -3,-3" transform="translate(0, 0) scale(1.15)"/>
+      <!-- Left Star 1 -->
+      <polygon points="0,-10 3,-3 10,-3 4,2 6,9 0,5 -6,9 -4,2 -10,-3 -3,-3" transform="translate(-22, 3) scale(0.9)"/>
+      <!-- Left Star 2 -->
+      <polygon points="0,-10 3,-3 10,-3 4,2 6,9 0,5 -6,9 -4,2 -10,-3 -3,-3" transform="translate(-42, 10) scale(0.75)"/>
+      <!-- Right Star 1 -->
+      <polygon points="0,-10 3,-3 10,-3 4,2 6,9 0,5 -6,9 -4,2 -10,-3 -3,-3" transform="translate(22, 3) scale(0.9)"/>
+      <!-- Right Star 2 -->
+      <polygon points="0,-10 3,-3 10,-3 4,2 6,9 0,5 -6,9 -4,2 -10,-3 -3,-3" transform="translate(42, 10) scale(0.75)"/>
+    </g>
+
+    <!-- Center Hero Text: 20+ YEARS -->
+    <text x="120" y="106" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      20+ YEARS
+    </text>
+
+    <!-- Center Sub-text -->
+    <text x="120" y="123" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#93c5fd" text-anchor="middle" letter-spacing="2">
+      IN BUSINESS
+    </text>
+
+    <!-- Ribbon Background Tails -->
+    <polygon points="12,176 34,142 34,180" fill="#02476d"/>
+    <polygon points="228,176 206,142 206,180" fill="#02476d"/>
+
+    <!-- Ribbon Banner Body -->
+    <path d="M 24,144 L 216,144 Q 222,144 222,150 L 214,174 Q 212,178 206,178 L 34,178 Q 28,178 26,174 L 18,150 Q 18,144 24,144 Z" fill="url(#blueRibbon)" stroke="#ffffff" stroke-width="1.5"/>
+    
+    <!-- Gold Trim lines on banner -->
+    <line x1="26" y1="148" x2="214" y2="148" stroke="#fcd34d" stroke-width="1.2" stroke-opacity="0.8"/>
+    <line x1="32" y1="174" x2="208" y2="174" stroke="#fcd34d" stroke-width="1.2" stroke-opacity="0.8"/>
+
+    <!-- Ribbon Bold Text: SINCE 2004 -->
+    <text x="120" y="167" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2.5">
+      SINCE 2004
+    </text>
+
+    <!-- Bottom Text Arc: TRUST & QUALITY -->
+    <path id="textArcBottom" d="M 60,195 A 68,68 0 0,0 180,195" fill="none"/>
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="800" fill="#cbd5e1" letter-spacing="1.8">
+      <textPath href="#textArcBottom" startOffset="50%" text-anchor="middle">
+        PROVEN RELIABILITY
+      </textPath>
+    </text>
+  </g>
+</svg>
