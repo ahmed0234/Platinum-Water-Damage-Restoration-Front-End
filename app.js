@@ -305,6 +305,8 @@
           : "https://platinumsg.com/",
       submission_id: currentSubmissionId,
       consent: "Contact me about this water damage request.",
+      // Only an explicit tick counts as SMS consent; never preselected or inferred.
+      sms_consent: form.elements.sms_consent?.checked ? "yes" : "no",
     };
 
     if (preservedGclid) {

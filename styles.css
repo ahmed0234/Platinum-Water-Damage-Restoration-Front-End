@@ -445,6 +445,30 @@ textarea {
 .optional-details textarea {
   margin-bottom: 0;
 }
+.sms-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.sms-consent input {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  min-height: 0;
+  margin: 1px 0 0;
+  padding: 0;
+  accent-color: var(--red);
+  cursor: pointer;
+}
+.sms-consent label {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+  cursor: pointer;
+}
 .submit {
   width: 100%;
   justify-content: space-between;
